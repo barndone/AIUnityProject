@@ -39,6 +39,12 @@ public class HumanoidMotor : MonoBehaviour
     //  tracks if the Agent is actively crouching
     private bool IsCrouching = false;
 
+    //  Toggle between states of CharacterController being active (to allow to transform position)
+    void CharacterControllerToggle()
+    {
+        motor.enabled = !motor.enabled;
+    }
+
     void Start()
     {
         //  if the Agent was not assigned in the inspector,
@@ -81,18 +87,9 @@ public class HumanoidMotor : MonoBehaviour
                 //  make the Agent crouch:
                 //  adjust the height of the collider to the crouch height
                 motorCollider.height = CrouchHeight;
+                motor.height = CrouchHeight;
 
                 IsCrouching = true;
-
-                //  adjust for Controller scaling from the center
-                //  height adjustment: crouchHeight subtracted from the current y transform
-                transform.position = new Vector3(transform.position.x, 
-                                                    transform.position.y - CrouchHeight, 
-                                                    transform.position.z);
-
-                transform.localScale = new Vector3(transform.localScale.x,
-                                                    CrouchHeight / 2,
-                                                    transform.localScale.z);
             }
             //  otherwise, the Agent is currently crouching
             else
@@ -101,7 +98,7 @@ public class HumanoidMotor : MonoBehaviour
                 BaseMove *= Crouch_Multiplier;
             }
         }
-        else if (!CrouchWish)
+        else if (!CrouchWish && IsCrouching)
         {
             //  mark crouch wish as false
             CrouchWish = false;
@@ -109,15 +106,7 @@ public class HumanoidMotor : MonoBehaviour
             IsCrouching = false;
             //  reverse the changed made when first crouching
             motorCollider.height = WalkHeight;
-            //  adjust for Controller scaling from the center
-            //  height adjustment: CrouchHeight added to the current y transform
-            transform.position = new Vector3(transform.position.x,
-                                                transform.position.y + CrouchHeight,
-                                                transform.position.z);
-
-            transform.localScale = new Vector3(transform.localScale.x,
-                                                CrouchHeight,
-                                                transform.localScale.z);
+            motor.height = WalkHeight;
         }
 
         //  Apply the movement to the Agent
