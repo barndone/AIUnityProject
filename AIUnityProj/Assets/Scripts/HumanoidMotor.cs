@@ -10,32 +10,38 @@ public class HumanoidMotor : MonoBehaviour
 
     [Header("Movement Options")]
     //  crouch speed multiplier
-    [SerializeField] [Range(0.0f, 1.0f)] private float Crouch_Multiplier = 0.5f;
+    [SerializeField][Range(0.0f, 1.0f)] public float Crouch_Multiplier = 0.5f;
     //  walk speed
-    [SerializeField] [Range(1.0f, 10.0f)] private float Walk_Speed = 1.0f;
+    [SerializeField][Range(1.0f, 10.0f)] public float Walk_Speed = 1.0f;
     //  sprint speed multiplier
-    [SerializeField] [Range(1.0f, 2.0f)] private float Sprint_Multiplier = 1.5f;
+    [SerializeField][Range(1.0f, 2.0f)] public float Sprint_Multiplier = 1.5f;
+
+    //  Property for returning how fast the Agent is moving
+    public float Move_Speed
+    {
+        get { return SprintWish ? Walk_Speed * Sprint_Multiplier: Walk_Speed; }
+    }
 
     //  engine editable crouch Height & walk Height
-    [SerializeField] private float CrouchHeight = 1.0f;
-    [SerializeField] private float WalkHeight = 2.0f;
+    [SerializeField] public float CrouchHeight = 1.0f;
+    [SerializeField] public float WalkHeight = 2.0f;
 
     [Header("Movement Wishes")]
-    //  boolean for tracking if the Motor should sprint or not
+    //  boolean for tracking if the Agent should sprint or not
     public bool SprintWish = false;
-    //  boolean for tracking if the Motor should crouch or not
+    //  boolean for tracking if the Agent should crouch or not
     public bool CrouchWish = false;
-    //  vector for tracking where the Motor should move to
+    //  vector for tracking where the Agent should move to
     public Vector3 MoveWish;
 
     //  velocity used for gravity
     private float yVelocity;
-    //  tracks if the motor is actively crouching
+    //  tracks if the Agent is actively crouching
     private bool IsCrouching = false;
 
     void Start()
     {
-        //  if the motor was not assigned in the inspector,
+        //  if the Agent was not assigned in the inspector,
         if (motor == null)
         {
             //  assign it here
@@ -46,12 +52,6 @@ public class HumanoidMotor : MonoBehaviour
         {
             TryGetComponent<CapsuleCollider>(out motorCollider);
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     void FixedUpdate()
@@ -65,20 +65,20 @@ public class HumanoidMotor : MonoBehaviour
             yVelocity = Physics.gravity.y * Time.deltaTime;
         }
 
-        //  check if the motor should be sprinting
+        //  check if the Agent should be sprinting
         if (SprintWish)
         {
             //  if so: multiply BaseMove by Sprint_Multiplier as well
             BaseMove *= Sprint_Multiplier;
         }
 
-        //  check if the motor should be crouching
+        //  check if the Agent should be crouching
         if (CrouchWish)
         {
-            //  if the motor is not currently crouching:
+            //  if the Agent is not currently crouching:
             if (!IsCrouching)
             {
-                //  make the humanoid crouch:
+                //  make the Agent crouch:
                 //  adjust the height of the collider to the crouch height
                 motorCollider.height = CrouchHeight;
 
@@ -94,7 +94,7 @@ public class HumanoidMotor : MonoBehaviour
                                                     CrouchHeight / 2,
                                                     transform.localScale.z);
             }
-            //  otherwise, the motor is currently crouching
+            //  otherwise, the Agent is currently crouching
             else
             {
                 //  apply the movement multiplier
@@ -105,7 +105,7 @@ public class HumanoidMotor : MonoBehaviour
         {
             //  mark crouch wish as false
             CrouchWish = false;
-            //  mark that the motor is no longer crouching!
+            //  mark that the Agent is no longer crouching!
             IsCrouching = false;
             //  reverse the changed made when first crouching
             motorCollider.height = WalkHeight;
@@ -120,7 +120,7 @@ public class HumanoidMotor : MonoBehaviour
                                                 transform.localScale.z);
         }
 
-        //  Apply the movement
+        //  Apply the movement to the Agent
         motor.Move(BaseMove * Time.deltaTime);
         motor.Move(new Vector3(0, yVelocity, 0) * Time.deltaTime);
     }

@@ -11,6 +11,16 @@ public class BasicAIController : MonoBehaviour
 
     public float threshold = 0.3f;
 
+    public LayerMask worldMask;
+
+    void Start()
+    {
+        if (motor == null)
+        {
+            TryGetComponent<HumanoidMotor>(out motor);
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -41,19 +51,42 @@ public class BasicAIController : MonoBehaviour
         motor.MoveWish = offset;
 
         //
-        //  determining if a crouch is required:
+        //  determining if a crouch is required
         //
 
-        Vector3 top = motor.motorCollider.center + new Vector3(0, motor.motorCollider.height / 2 - motor.motorCollider.radius, 0);
-        top = motor.transform.TransformPoint(top);
+        Vector3 WalkTop = motor.motorCollider.center + new Vector3(0, motor.WalkHeight / 2 - motor.motorCollider.radius, 0);
+        WalkTop = motor.transform.TransformPoint(WalkTop);
 
-        Vector3 bot = motor.motorCollider.center - new Vector3(0, motor.motorCollider.height / 2 - motor.motorCollider.radius, 0);
+        Vector3 bot = motor.motorCollider.center - new Vector3(0, motor.WalkHeight / 2 - motor.motorCollider.radius, 0);
         bot = motor.transform.TransformPoint(bot);
 
+        Vector3 CrouchTop;
 
-        Debug.DrawLine(top, bot, Color.red);
 
-        //Physics.CapsuleCast();
+        Debug.DrawLine(WalkTop, bot, Color.red);
 
+        bool isBlocked = Physics.CapsuleCast(WalkTop, bot, motor.motorCollider.radius, offset.normalized, motor.Move_Speed * Time.deltaTime);
+        if (isBlocked)
+        {
+            CrouchTop = motor.motorCollider.center + new Vector3(0, motor.CrouchHeight / 2 - motor.motorCollider.radius, 0);
+            CrouchTop = motor.transform.TransformPoint(CrouchTop);
+
+            bool shouldCrouch = !Physics.CapsuleCast(CrouchTop, bot, motor.motorCollider.radius, offset.normalized, motor.Move_Speed * Time.deltaTime);
+            if (shouldCrouch)
+            {
+                motor.CrouchWish = true;
+            }
+        }
+
+        if (motor.CrouchWish)
+        {
+            var overlaps = Physics.OverlapCapsule(WalkTop, bot, motor.motorCollider.radius, worldMask);
+        
+            if (overlaps.Length == 0)
+            {
+                
+                Debug.Log("Not Under Something!");
+            }
+        }
     }
 }
