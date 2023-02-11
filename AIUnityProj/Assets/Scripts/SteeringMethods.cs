@@ -52,4 +52,10 @@ public static class SteeringMethods
 
         return Seek(currentPos, currentPos + currentVel + spherePoint, currentVel, maxVelocity);
     }
+
+    public static Vector3 Pursue(Vector3 currentPos, Vector3 targetPos, Vector3 currentVelocity, Vector3 targetVelocity, float maxVelocity)
+    {
+        Vector3 desiredVelocity = (targetPos + targetVelocity - currentPos).normalized * maxVelocity;
+        return desiredVelocity - currentVelocity;
+    }
 }
