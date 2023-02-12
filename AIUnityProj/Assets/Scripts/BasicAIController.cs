@@ -118,11 +118,7 @@ public class BasicAIController : MonoBehaviour
         //  if the agent is pursuing a target
         if (isPursuing)
         {
-            //  if there isn't a target
-            if (target == null)
-            {
 
-            }
         }
 
         //  if the agent is evading a target
