@@ -15,11 +15,11 @@ D:/AIE Work/repos/AIUnityProject/AIUnityProj
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-51181
+64287
 Successfully changed project path to: D:/AIE Work/repos/AIUnityProject/AIUnityProj
 D:/AIE Work/repos/AIUnityProject/AIUnityProj
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 18.89 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 18.57 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.5f1 (8095aa901b9b)
 [Subsystems] Discovering subsystems at path D:/Unity/2020.3.5f1/Editor/Data/Resources/UnitySubsystems
@@ -35,220 +35,169 @@ Initialize mono
 Mono path[0] = 'D:/Unity/2020.3.5f1/Editor/Data/Managed'
 Mono path[1] = 'D:/Unity/2020.3.5f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'D:/Unity/2020.3.5f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56948
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56300
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Unity/2020.3.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001139 seconds.
+Registered in 0.001108 seconds.
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 18.90 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.028 seconds
+- Completed reload, in  1.015 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.000580 seconds.
+Registered in 0.000596 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-0000021B42687810 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file data-0000021168080030 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021CFD1BA9B0 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file data-0000021162577130 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021CFD6A1040 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file data-000002116261B8B0 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B418DD020 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file data-0000021162637020 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B41953020 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file data-0000021162966A20 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B43055020 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file data-0000021162E1BE40 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.Timeline.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B43055020 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file data-0000021162E1BE40 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.TextMeshPro.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B418DD020 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file data-0000021162806EC0 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B41A59E30 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file data-0000021162994430 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B431E7010 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file data-00000211624EB010 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\UnityEditor.UI.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021CFD887E20 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file data-000002116754EE20 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.Rider.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B41967A30 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file data-0000021162DD6060 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\UnityEngine.UI.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.19 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.666 seconds
+- Completed reload, in  0.670 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 0.18 ms, found 0 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.19 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1122 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 57.4 MB.
 System memory in use after: 57.4 MB.
 
 Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 1564.
-Total: 1.477500 ms (FindLiveObjects: 0.113700 ms CreateObjectMapping: 0.035000 ms MarkObjects: 1.267400 ms  DeleteObjects: 0.060700 ms)
+Total: 1.435400 ms (FindLiveObjects: 0.161300 ms CreateObjectMapping: 0.035500 ms MarkObjects: 1.177100 ms  DeleteObjects: 0.060700 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Scripts
-  artifactKey: Guid(8c77fb987a2c0284e9269825dc657830) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts using Guid(8c77fb987a2c0284e9269825dc657830) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15daa24b091b7fe6d587896c5f321c4f') in 0.015210 seconds
-  Import took 0.016704 seconds .
+  path: Assets/Scripts/SteeringMethods.cs
+  artifactKey: Guid(1366faa8b1e48f340a8d32912556e373) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/SteeringMethods.cs using Guid(1366faa8b1e48f340a8d32912556e373) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa12961752ab1dbefe377f56ead02c34') in 0.092290 seconds
+  Import took 0.093915 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 4.446322 seconds.
+  Time since last request: 0.000263 seconds.
+  path: Assets/Scripts/PhysicsUtil.cs
+  artifactKey: Guid(28bcfb61cf5b6644e878f426d9e7d824) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/PhysicsUtil.cs using Guid(28bcfb61cf5b6644e878f426d9e7d824) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96ee73608e26c174c9e350f1941d8a56') in 0.005101 seconds
+  Import took 0.006577 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.036998 seconds.
+  path: Assets/Scripts/HumanoidMotor.cs
+  artifactKey: Guid(a537dede80ef72344972c503d1240fe4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/HumanoidMotor.cs using Guid(a537dede80ef72344972c503d1240fe4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19ecf343dc0ee4b69a27d90926667172') in 0.005079 seconds
+  Import took 0.006605 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.015413 seconds.
+  path: Assets/Scripts/HumanoidMotor.cs
+  artifactKey: Guid(a537dede80ef72344972c503d1240fe4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/HumanoidMotor.cs using Guid(a537dede80ef72344972c503d1240fe4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19ecf343dc0ee4b69a27d90926667172') in 0.001788 seconds
+  Import took 0.003323 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.920113 seconds.
+  path: Assets/Scripts/BoidMotor.cs
+  artifactKey: Guid(15c0dd371c34c9d4e8066c0c22f5c8fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/BoidMotor.cs using Guid(15c0dd371c34c9d4e8066c0c22f5c8fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5684b7c6c4f167be43f7d07f10d6e04d') in 0.004951 seconds
+  Import took 0.006593 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.434898 seconds.
+  path: Assets/Scripts/BoidAIController.cs
+  artifactKey: Guid(10c5a956bd94b0c4aae7aba6f141ad2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/BoidAIController.cs using Guid(10c5a956bd94b0c4aae7aba6f141ad2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26a6012d59f9ae25413260133afcf423') in 0.005227 seconds
+  Import took 0.006811 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.271132 seconds.
   path: Assets/Scripts/BasicAIController.cs
   artifactKey: Guid(6fe365cfe92fdd74ea14c8ddd2efa9bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/BasicAIController.cs using Guid(6fe365cfe92fdd74ea14c8ddd2efa9bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bfe633e31b3f34c92bfa25517bf9bb9') in 0.119651 seconds
-  Import took 0.121275 seconds .
-
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 0.66 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 35.0 MB.
-System memory in use after: 35.1 MB.
-
-Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 1564.
-Total: 1.879200 ms (FindLiveObjects: 0.130400 ms CreateObjectMapping: 0.034400 ms MarkObjects: 1.672700 ms  DeleteObjects: 0.040600 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000641 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-0000021B43167040 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B42CD0040 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B422E8020 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021CFD2F9F80 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021CFDAF1020 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B42CD0040 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B4422C1C0 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021CFDA2A020 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B41A59E30 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B42BC0080 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\UnityEditor.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B421C3040 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B42670020 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\UnityEngine.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.716 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.19 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1117 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.3 MB.
-System memory in use after: 57.4 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1567.
-Total: 1.470700 ms (FindLiveObjects: 0.190300 ms CreateObjectMapping: 0.064000 ms MarkObjects: 1.170300 ms  DeleteObjects: 0.044900 ms)
+Start importing Assets/Scripts/BasicAIController.cs using Guid(6fe365cfe92fdd74ea14c8ddd2efa9bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb8ee0a51fb635ef48cf1bca1a15fb6c') in 0.001892 seconds
+  Import took 0.003383 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 208.463564 seconds.
-  path: Assets/Scripts/SteeringMethods.cs
-  artifactKey: Guid(1366faa8b1e48f340a8d32912556e373) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/SteeringMethods.cs using Guid(1366faa8b1e48f340a8d32912556e373) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54e356551c4fd42e7e7a4a35a16e6f31') in 0.006715 seconds
-  Import took 0.008352 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000612 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-0000021B4456F870 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021CFD684030 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B422E8020 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021CFD1E7290 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021CFD745BF0 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B44AD7020 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B4422C1C0 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B423F3020 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021CFD703030 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021CFDC30E20 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\UnityEditor.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021CFD73F030 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B41E52010 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\UnityEngine.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.18 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.651 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.18 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1117 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.3 MB.
-System memory in use after: 57.4 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1570.
-Total: 1.522800 ms (FindLiveObjects: 0.114400 ms CreateObjectMapping: 0.034000 ms MarkObjects: 1.333400 ms  DeleteObjects: 0.040300 ms)
+  Time since last request: 0.003577 seconds.
+  path: Assets/Scripts/BasicAIController.cs
+  artifactKey: Guid(6fe365cfe92fdd74ea14c8ddd2efa9bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/BasicAIController.cs using Guid(6fe365cfe92fdd74ea14c8ddd2efa9bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb8ee0a51fb635ef48cf1bca1a15fb6c') in 0.001786 seconds
+  Import took 0.003278 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 46.557936 seconds.
-  path: Assets/Scripts/SteeringMethods.cs
-  artifactKey: Guid(1366faa8b1e48f340a8d32912556e373) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/SteeringMethods.cs using Guid(1366faa8b1e48f340a8d32912556e373) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dff910fd3a89e80fa57cafbbada747db') in 0.003372 seconds
-  Import took 0.005027 seconds .
+  Time since last request: 1.956133 seconds.
+  path: Assets/Scripts/HumanoidController.cs
+  artifactKey: Guid(90b6f0183f6948f43968400851ba1ea5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/HumanoidController.cs using Guid(90b6f0183f6948f43968400851ba1ea5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eafe1f567c38b1e2db401afa167b2468') in 0.005054 seconds
+  Import took 0.006606 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 372.443115 seconds.
+  path: Assets/Scripts/BasicAIController.cs
+  artifactKey: Guid(6fe365cfe92fdd74ea14c8ddd2efa9bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/BasicAIController.cs using Guid(6fe365cfe92fdd74ea14c8ddd2efa9bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92d4648fb93084c36a089ef4de05917d') in 0.002599 seconds
+  Import took 0.005112 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000520 seconds.
+Registered in 0.000691 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-0000021B447F0E40 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file data-00000211691EF820 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B41A5D030 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file data-00000211625FA060 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B42539010 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file data-0000021162565010 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B42630060 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file data-00000211626138A0 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B4480E4D0 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file data-0000021162A66020 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021CFD699030 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file data-00000211626138A0 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.Timeline.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B443A9380 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file data-0000021162806EC0 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.TextMeshPro.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B44870C40 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file data-00000211626138A0 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B42EFC430 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file data-00000211625FA060 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B431E7010 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file data-00000211624EB010 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\UnityEditor.UI.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B447F68B0 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file data-000002116754EE20 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.Rider.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B42670020 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file data-00000211624963A0 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\UnityEngine.UI.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.18 ms, found 0 plugins.
@@ -256,233 +205,65 @@ Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
 - Completed reload, in  0.631 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.17 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1117 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.3 MB.
-System memory in use after: 57.4 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1573.
-Total: 1.670200 ms (FindLiveObjects: 0.239500 ms CreateObjectMapping: 0.040800 ms MarkObjects: 1.348500 ms  DeleteObjects: 0.040200 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000559 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-0000021B447F0E40 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B41A5D030 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B4229F030 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B41D9A010 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021CFD6AAED0 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B423F3020 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B445ED540 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021CFDCBA830 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021CFD2AB020 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B41B70030 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\UnityEditor.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B447F68B0 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B41E52010 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\UnityEngine.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.18 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.701 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1117 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.3 MB.
-System memory in use after: 57.4 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1576.
-Total: 1.676900 ms (FindLiveObjects: 0.216500 ms CreateObjectMapping: 0.066900 ms MarkObjects: 1.350200 ms  DeleteObjects: 0.041600 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000584 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-0000021B42EA6020 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B41985010 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B422E8020 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021CFD2F9F80 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B443DD9C0 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021CFD1A9010 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B445ED540 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B41A5D030 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B42EFC430 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B431E7010 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\UnityEditor.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B438B7060 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B44A43030 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\UnityEngine.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.17 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.617 seconds
-Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.18 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1117 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 57.3 MB.
 System memory in use after: 57.4 MB.
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1579.
-Total: 5.114700 ms (FindLiveObjects: 0.377000 ms CreateObjectMapping: 0.125300 ms MarkObjects: 4.470500 ms  DeleteObjects: 0.137800 ms)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1567.
+Total: 1.470800 ms (FindLiveObjects: 0.119500 ms CreateObjectMapping: 0.033100 ms MarkObjects: 1.274600 ms  DeleteObjects: 0.042500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 104.281525 seconds.
+  path: Assets/Scripts/StateManager.cs
+  artifactKey: Guid(8491c610a0089e44f8d6de0d1d7554d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/StateManager.cs using Guid(8491c610a0089e44f8d6de0d1d7554d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc53fcae9bf861666ceadbf91926c280') in 0.007754 seconds
+  Import took 0.009580 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000694 seconds.
+Registered in 0.000591 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-0000021B42EA6020 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file data-0000021162955E90 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021CFD6DC010 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file data-0000021162B841E0 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B422E8020 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file data-0000021169C8F060 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B41A5D030 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file data-000002116819B010 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B44739580 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file data-00000211692A8060 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B447D6010 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file data-0000021162B841E0 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.Timeline.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B41FB3020 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file data-0000021168E02010 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.TextMeshPro.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B41A5D030 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file data-000002116819B010 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B42EFC430 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file data-0000021162B985F0 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B431E7010 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file data-00000211624EB010 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\UnityEditor.UI.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B446D24D0 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file data-00000211689E9020 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.Rider.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B4434BEF0 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file data-0000021169C96C10 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\UnityEngine.UI.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.19 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.635 seconds
-Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.18 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1117 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.4 MB.
-System memory in use after: 57.4 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1582.
-Total: 1.500400 ms (FindLiveObjects: 0.149100 ms CreateObjectMapping: 0.034900 ms MarkObjects: 1.274800 ms  DeleteObjects: 0.039900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000718 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-0000021B41B76830 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B423BF020 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B422E8020 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B420E7070 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B458DE010 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021CFDA2A020 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B41FB3020 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B434A5040 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021CFD2AB020 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B431E7010 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\UnityEditor.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021CFD6FC030 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B41E52010 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\UnityEngine.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.678 seconds
+- Completed reload, in  0.692 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.18 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1117 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.4 MB.
+Unloading 1118 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 57.3 MB.
 System memory in use after: 57.4 MB.
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1585.
-Total: 1.535400 ms (FindLiveObjects: 0.121600 ms CreateObjectMapping: 0.031400 ms MarkObjects: 1.318400 ms  DeleteObjects: 0.063100 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000585 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-0000021CFDC34E30 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B442DBEF0 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B422E8020 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B44691020 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B458DE010 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B43578020 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.Timeline.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B41FB3020 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B44691020 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B42EFC430 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B431E7010 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\UnityEditor.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021CFD6FC030 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\Unity.Rider.Editor.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021B448C0010 doesn't match image D:\AIE Work\repos\AIUnityProject\AIUnityProj\Library\ScriptAssemblies\UnityEngine.UI.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.19 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.622 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.18 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1117 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.4 MB.
-System memory in use after: 57.4 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1588.
-Total: 1.383200 ms (FindLiveObjects: 0.115400 ms CreateObjectMapping: 0.029500 ms MarkObjects: 1.192700 ms  DeleteObjects: 0.044500 ms)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1571.
+Total: 1.487300 ms (FindLiveObjects: 0.139700 ms CreateObjectMapping: 0.033500 ms MarkObjects: 1.275000 ms  DeleteObjects: 0.038400 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

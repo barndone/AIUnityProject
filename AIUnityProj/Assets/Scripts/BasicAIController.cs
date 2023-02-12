@@ -9,13 +9,12 @@ public class BasicAIController : MonoBehaviour
     [SerializeField] private HumanoidMotor motor;                           //  the HumanoidMotor component of the Agent
     [Space]
     [Header("Waypoint Options")]
+    [SerializeField] private bool hasValidTarget = false;
     [SerializeField] private Transform[] waypoints;                         //  list of waypoints the agent has
     [SerializeField] private int currentWaypoint;                           //  the current waypoint the agent is focused on
     public float threshold = 0.3f;                                          //  the threshold for arriving at a waypoint
     [SerializeField] private GameObject target;                             //  the target entity of the GameObject
-    [SerializeField] private Rigidbody targetRb;                            //  the rigidbody attached to the Target
-    [SerializeField] private HumanoidMotor targetMotor;                     //  the motor attached to the Target
-    [SerializeField] private bool hasMotor;                                 //  flag for if the target has a motor or a rigidbody
+    public GameObject Target { get { return target; } }
     [Space]
     [Header("Steering Behavior Options")]
     [SerializeField] private bool isSeeking;                                //  flag for if the agent is seeking   
@@ -40,6 +39,12 @@ public class BasicAIController : MonoBehaviour
     [Space]
     [Header("Obstacle Detection Options")]
     public LayerMask worldMask;
+    [Space]
+    [Header("Entity Detection")]
+    [SerializeField] private float raycastRadius = 2.0f;
+    [SerializeField] private float raycastDistance = 5.0f;
+    private RaycastHit hitInfo;
+    private bool hasDetectedEntity = false;
 
     void Start()
     {
@@ -51,9 +56,11 @@ public class BasicAIController : MonoBehaviour
         }
     }
 
+
     // Update is called once per frame
     void FixedUpdate()
     {
+
         //  Where am I?
         Vector3 curPos = motor.transform.position;
         //  Where do I want to be?
@@ -61,25 +68,78 @@ public class BasicAIController : MonoBehaviour
         //  What is the delta between those two
         Vector3 offset = destination - curPos;
 
-        // I don't know why we use squared values: easier to compute?
-        //  if the length of the offset (delta distance) squared is less than the threshold squared:
-        if (offset.sqrMagnitude < threshold * threshold)
+        //  if the target does not have a target, patrol normally
+        if (!hasValidTarget)
         {
-            //  we have arrived at the current waypoint!
-            //  increment the current waypoint
-            ++currentWaypoint;
-
-            //  if the current waypoint would be out of bounds for the waypoint array:
-            if (currentWaypoint >= waypoints.Length)
+            // I don't know why we use squared values: easier to compute?
+            //  if the length of the offset (delta distance) squared is less than the threshold squared:
+            if (offset.sqrMagnitude < threshold * threshold)
             {
-                //  assign current to 0
-                currentWaypoint = 0;
-            }
+                //  we have arrived at the current waypoint!
+                //  increment the current waypoint
+                ++currentWaypoint;
 
-            //  re-calculate a destination with the new currentWaypoint
-            destination = waypoints[currentWaypoint].transform.position;
-            //  calculate a new offset
-            offset = destination - curPos;
+                //  if the current waypoint would be out of bounds for the waypoint array:
+                if (currentWaypoint >= waypoints.Length)
+                {
+                    //  assign current to 0
+                    currentWaypoint = 0;
+                }
+
+                //  re-calculate a destination with the new currentWaypoint
+                destination = waypoints[currentWaypoint].transform.position;
+                //  calculate a new offset
+                offset = destination - curPos;
+            }
+        }
+
+        //  if there is not a valid target
+        if (!hasValidTarget)
+        {
+            //  vision check
+            CheckForEntitiesInVision(ref target, ref hasValidTarget);
+        }
+        
+        //  if there is a target and it is valid
+        if (target != null && hasValidTarget)
+        {
+            //  pursue the target (if not already pursuing)
+            if (!isPursuing)
+            {
+                isPursuing = true;
+                destination = target.transform.position;
+                offset = destination - curPos;
+            }
+            else
+            {
+                destination = target.transform.position;
+                offset = destination - curPos;
+
+                if (offset.sqrMagnitude < threshold * threshold)
+                {
+                    isPursuing = false;
+                }
+            }
+        }
+        //  otherwise, is there a target but it isn't a valid target?
+        else if (target != null && !hasValidTarget)
+        {
+            if (!isEvading)
+            {
+                isEvading = true;
+                destination = target.transform.position;
+                offset = destination - curPos;
+            }
+            else
+            {
+                destination = target.transform.position;
+                offset = destination - curPos;
+
+                if (offset.sqrMagnitude > 25)
+                {
+                    isEvading = false;
+                }
+            }
         }
 
         //  if the agent is seeking:
@@ -118,13 +178,23 @@ public class BasicAIController : MonoBehaviour
         //  if the agent is pursuing a target
         if (isPursuing)
         {
+            Vector3 targetVel = AIControllerUtils.GetTargetVelocity(target);
+            Vector3 pursuitForce = SteeringMethods.Pursue(curPos, destination, motor.MoveWish, targetVel, 1.0f);
+            pursuitForce.y = 0.0f;
+            pursuitForce.Normalize();
 
+            motor.MoveWish += pursuitForce * (pursueStrength * Time.deltaTime);
         }
 
         //  if the agent is evading a target
         if (isEvading)
         {
+            Vector3 targetVel = AIControllerUtils.GetTargetVelocity(target);
+            Vector3 evadeForce = SteeringMethods.Pursue(curPos, destination, motor.MoveWish, targetVel, 1.0f);
+            evadeForce.y = 0.0f;
+            evadeForce.Normalize();
 
+            motor.MoveWish += evadeForce * (evadeStrength * Time.deltaTime);
         }
 
         //  if the agent is arriving at a location
@@ -136,10 +206,6 @@ public class BasicAIController : MonoBehaviour
 
         //  normalize the MoveWish vector
         motor.MoveWish.Normalize();
-
-        //
-        //  TODO: determine which steering behavior to utilize
-        //
 
         
 
@@ -220,6 +286,59 @@ public class BasicAIController : MonoBehaviour
                 //  set crouch wish to false, it is safe to stand
                 motor.CrouchWish = false;
             }
+        }
+    }
+
+    //  check if there are entities in the vision area of the Agent
+    public void CheckForEntitiesInVision(ref GameObject target, ref bool hasTarget)
+    {
+        //  cast in the direction the gameObject is facing to detect other Entities in the scene
+        hasDetectedEntity = Physics.SphereCast(transform.position, raycastRadius, Vector3.forward, out hitInfo, raycastDistance);
+
+        if (hasDetectedEntity)
+        {
+            //  we have detected the player:
+            if (hitInfo.transform.CompareTag("Player"))
+            {
+                target = hitInfo.transform.gameObject;
+                hasTarget = true;
+            }
+            //  we have detected another enemy
+            else if (hitInfo.transform.CompareTag("Enemy"))
+            {
+                //  check if that enemy has a AI controller component
+                if (hitInfo.transform.TryGetComponent<BasicAIController>(out BasicAIController targetController))
+                {
+                    //  if they have a target:
+                    if (targetController.Target != null)
+                    {
+                        target = targetController.Target;
+                        hasTarget = true;
+                    }
+                    //  otherwise path to avoid the target
+                    else
+                    {
+                        target = hitInfo.transform.gameObject;
+                        hasTarget = false;
+                    }
+                }
+                else
+                {
+                    target = hitInfo.transform.gameObject;
+                    hasTarget = false;
+                }
+            }
+            else
+            {
+                //  otherwise, it is neither, so path to avoid the target
+                target = hitInfo.transform.gameObject;
+                hasTarget = false;
+            }
+        }
+        //  otherwise we haven't detected anything
+        else
+        {
+            hasTarget = false;
         }
     }
 }
