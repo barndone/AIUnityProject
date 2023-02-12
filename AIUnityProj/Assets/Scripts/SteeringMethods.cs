@@ -53,9 +53,50 @@ public static class SteeringMethods
         return Seek(currentPos, currentPos + currentVel + spherePoint, currentVel, maxVelocity);
     }
 
+    /// <summary>
+    /// Pursues a target by seeking towards where the target is moving towards. 
+    /// </summary>
+    /// <param name="currentPos"></param>
+    /// <param name="targetPos"></param>
+    /// <param name="currentVelocity"></param>
+    /// <param name="targetVelocity"></param>
+    /// <param name="maxVelocity"></param>
+    /// <returns></returns>
     public static Vector3 Pursue(Vector3 currentPos, Vector3 targetPos, Vector3 currentVelocity, Vector3 targetVelocity, float maxVelocity)
     {
         Vector3 desiredVelocity = (targetPos + targetVelocity - currentPos).normalized * maxVelocity;
         return desiredVelocity - currentVelocity;
+    }
+
+    /// <summary>
+    /// Evades a target by seeking away from where the target is moving towards
+    /// </summary>
+    /// <param name="currentPos"></param>
+    /// <param name="targetPos"></param>
+    /// <param name="currentVelocity"></param>
+    /// <param name="targetVelocity"></param>
+    /// <param name="maxVelocity"></param>
+    /// <returns></returns>
+    public static Vector3 Evade(Vector3 currentPos, Vector3 targetPos, Vector3 currentVelocity, Vector3 targetVelocity, float maxVelocity)
+    {
+        Vector3 desiredVelocity = (currentPos - targetPos + targetVelocity).normalized * maxVelocity;
+        return desiredVelocity - currentVelocity;
+    }
+
+    /// <summary>
+    /// Slows down velocity of the Agent as it gets closer to a target after entering a given radius
+    /// </summary>
+    /// <param name="currentPos"></param>
+    /// <param name="targetPos"></param>
+    /// <param name="arrivalRad"></param>
+    /// <param name="currentVel"></param>
+    /// <param name="maxVelocity"></param>
+    /// <returns></returns>
+    public static Vector3 Arrive(Vector3 currentPos, Vector3 targetPos, float arrivalRad, Vector3 currentVel, float maxVelocity)
+    {
+        Vector3 desiredVelocity = Vector3.Min((targetPos - currentPos) / arrivalRad,        //  distance from target / arrival radius
+            currentVel).normalized * maxVelocity;                                           //  current velocity is the max velocity for the purpose of scaling back speed
+
+        return desiredVelocity - currentVel;
     }
 }

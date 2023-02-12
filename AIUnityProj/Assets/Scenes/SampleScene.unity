@@ -520,6 +520,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1581986672 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4273494414291628032, guid: c77830ca1ea66f740a3df6a4cb5c7860, type: 3}
+  m_PrefabInstance: {fileID: 4273494414402399476}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1870691279
 GameObject:
   m_ObjectHideFlags: 0
@@ -656,9 +661,13 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2694034207096577738, guid: f6c8dc1c99247314e9f117ab6cccccd2, type: 3}
+      propertyPath: waypoints.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2694034207096577738, guid: f6c8dc1c99247314e9f117ab6cccccd2, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
-      objectReference: {fileID: 1870691280}
+      objectReference: {fileID: 1581986672}
     - target: {fileID: 2694034207096577738, guid: f6c8dc1c99247314e9f117ab6cccccd2, type: 3}
       propertyPath: waypoints.Array.data[1]
       value: 
