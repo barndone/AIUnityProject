@@ -46,6 +46,10 @@ public class BasicAIController : MonoBehaviour
     private RaycastHit hitInfo;
     private bool hasDetectedEntity = false;
 
+    public bool crouchedThisFrame = false;
+    public bool isBlocked = false;
+
+
     void Start()
     {
         //  if this AI agent does not currently have a reference to its HumanoidMotor component
@@ -68,13 +72,23 @@ public class BasicAIController : MonoBehaviour
         //  What is the delta between those two
         Vector3 offset = destination - curPos;
 
-        //  if the target does not have a target, patrol normally
+
+
+        //  if there is not a valid target
+        if (!hasValidTarget)
+        {
+            //  vision check
+            CheckForEntitiesInVision(ref target, ref hasValidTarget);
+        }
+
+                //  if the target does not have a target, patrol normally
         if (!hasValidTarget)
         {
             // I don't know why we use squared values: easier to compute?
             //  if the length of the offset (delta distance) squared is less than the threshold squared:
             if (offset.sqrMagnitude < threshold * threshold)
             {
+                isArriving = false;
                 //  we have arrived at the current waypoint!
                 //  increment the current waypoint
                 ++currentWaypoint;
@@ -91,10 +105,17 @@ public class BasicAIController : MonoBehaviour
                 //  calculate a new offset
                 offset = destination - curPos;
             }
+
+            else
+            {
+                if (offset.magnitude <= arrivalRadius)
+                {
+                    isArriving = true;
+                }
+            }
         }
 
-        //  if there is not a valid target
-        if (!hasValidTarget)
+        if (hasValidTarget)
         {
             //  vision check
             CheckForEntitiesInVision(ref target, ref hasValidTarget);
@@ -118,6 +139,7 @@ public class BasicAIController : MonoBehaviour
                 if (offset.sqrMagnitude < threshold * threshold)
                 {
                     isPursuing = false;
+                    isArriving = false;
                 }
             }
         }
@@ -134,6 +156,8 @@ public class BasicAIController : MonoBehaviour
             {
                 destination = target.transform.position;
                 offset = destination - curPos;
+
+
 
                 if (offset.sqrMagnitude > 25)
                 {
@@ -183,31 +207,40 @@ public class BasicAIController : MonoBehaviour
             pursuitForce.y = 0.0f;
             pursuitForce.Normalize();
 
+            if (offset.magnitude <= arrivalRadius)
+            {
+                isArriving = true;
+            }
+
             motor.MoveWish += pursuitForce * (pursueStrength * Time.deltaTime);
+
+            //CheckForEntitiesInVision(ref target, ref hasValidTarget);
         }
 
         //  if the agent is evading a target
         if (isEvading)
         {
             Vector3 targetVel = AIControllerUtils.GetTargetVelocity(target);
-            Vector3 evadeForce = SteeringMethods.Pursue(curPos, destination, motor.MoveWish, targetVel, 1.0f);
+            Vector3 evadeForce = SteeringMethods.Evade(curPos, destination, motor.MoveWish, targetVel, 1.0f);
             evadeForce.y = 0.0f;
             evadeForce.Normalize();
+
+            if (offset.magnitude <= arrivalRadius)
+            {
+                isArriving = true;
+            }
+
 
             motor.MoveWish += evadeForce * (evadeStrength * Time.deltaTime);
         }
 
-        //  if the agent is arriving at a location
-        if (isArriving)
-        {
-
-        }
-
-
         //  normalize the MoveWish vector
         motor.MoveWish.Normalize();
 
-        
+        offset.y = 0.0f;
+
+        var offsetRotation = Quaternion.LookRotation(offset);
+        transform.rotation = Quaternion.Slerp(transform.rotation, offsetRotation, 2.5f * Time.deltaTime);
 
         //
         //  determining if a crouch is required
@@ -230,9 +263,8 @@ public class BasicAIController : MonoBehaviour
         //      check if the agent is blocked by an obstacle given:
         //          the top portion of the walking agent, the bottom portion of the walking agent
         //          the radius of the attached collider, the direction of the agent, and the move speed over time scaled by 1.1f
-        bool isBlocked = Physics.CapsuleCast(WalkTop, bot, motor.motorCollider.radius, offset.normalized, motor.Move_Speed * 1.1f * Time.deltaTime);
+        isBlocked = Physics.CapsuleCast(WalkTop, bot, motor.motorCollider.radius, offset.normalized, motor.Move_Speed * 1.1f * Time.deltaTime);
         //  initialize boolean for if the Agent crouched this frame
-        bool crouchedThisFrame = false;
 
         //  if the agent is blocked and crouch wish is false
         if (isBlocked && !motor.CrouchWish)
@@ -287,13 +319,15 @@ public class BasicAIController : MonoBehaviour
                 motor.CrouchWish = false;
             }
         }
+
+        crouchedThisFrame = false;
     }
 
     //  check if there are entities in the vision area of the Agent
     public void CheckForEntitiesInVision(ref GameObject target, ref bool hasTarget)
     {
         //  cast in the direction the gameObject is facing to detect other Entities in the scene
-        hasDetectedEntity = Physics.SphereCast(transform.position, raycastRadius, Vector3.forward, out hitInfo, raycastDistance);
+        hasDetectedEntity = Physics.SphereCast(transform.position, raycastRadius, transform.forward, out hitInfo, raycastDistance);
 
         if (hasDetectedEntity)
         {
@@ -334,11 +368,28 @@ public class BasicAIController : MonoBehaviour
                 target = hitInfo.transform.gameObject;
                 hasTarget = false;
             }
+
+            isSeeking = false;
         }
         //  otherwise we haven't detected anything
         else
         {
+            target = null;
             hasTarget = false;
+
+            isSeeking = true;
+
+            if (isPursuing)
+            {
+                isPursuing = false;
+            }
+
+            if (isEvading)
+            {
+                isEvading = false;
+            }
+
+            motor.MoveWish = Vector3.zero;  
         }
     }
 }
