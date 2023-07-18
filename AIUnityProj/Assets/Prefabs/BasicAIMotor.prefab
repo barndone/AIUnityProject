@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 2694034205153699145}
   - component: {fileID: 2694034205153699146}
   - component: {fileID: 2694034205153699147}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Body
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,9 +94,9 @@ GameObject:
   - component: {fileID: 2694034207096577782}
   - component: {fileID: 2694034207096577736}
   - component: {fileID: 2694034207096577783}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BasicAIMotor
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -129,12 +129,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   motor: {fileID: 2694034207096577782}
+  hasValidTarget: 0
   waypoints:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   currentWaypoint: 0
   threshold: 1.1
+  target: {fileID: 0}
   isSeeking: 0
   isFleeing: 0
   isWandering: 0
@@ -143,12 +145,20 @@ MonoBehaviour:
   isArriving: 0
   seekStrenght: 2
   fleeStrength: 2
-  wanderStrenght: 3
-  wanderRadius: 3
+  wanderStrenght: 0
+  wanderRadius: 2
   jitterStr: 0.5
+  pursueStrength: 2
+  evadeStrength: 2
+  arrivalStrength: 2
+  arrivalRadius: 3
   worldMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1
+  raycastRadius: 1
+  raycastDistance: 10
+  crouchedThisFrame: 0
+  isBlocked: 0
 --- !u!114 &2694034207096577782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,6 +210,6 @@ CharacterController:
   m_Radius: 0.5
   m_SlopeLimit: 45
   m_StepOffset: 0.3
-  m_SkinWidth: 0.08
+  m_SkinWidth: 0.0001
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1, z: 0}

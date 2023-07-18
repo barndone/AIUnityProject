@@ -6,6 +6,8 @@ public class HumanoidController : MonoBehaviour
 {
     [SerializeField] private HumanoidMotor motor;
 
+    public bool isScary = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +24,16 @@ public class HumanoidController : MonoBehaviour
         motor.MoveWish = new Vector3(Input.GetAxisRaw("Horizontal"), 0.0f, Input.GetAxisRaw("Vertical"));
         motor.CrouchWish = Input.GetButton("Crouch");
         motor.SprintWish = Input.GetButton("Sprint");
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            motor.isScary = true;
+        }
+
+        else if (Input.GetKeyUp(KeyCode.Space))
+        {
+            motor.isScary = false;
+        }
 
         //  clamp the movement vector (solves the issue of moving diagonally being faster)
         motor.MoveWish = Vector3.ClampMagnitude(motor.MoveWish, 1.0f);

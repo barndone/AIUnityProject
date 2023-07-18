@@ -39,6 +39,8 @@ public class HumanoidMotor : MonoBehaviour
     //  tracks if the Agent is actively crouching
     private bool IsCrouching = false;
 
+    public bool isScary = false;
+
     //  Toggle between states of CharacterController being active (to allow to transform position)
     void CharacterControllerToggle()
     {

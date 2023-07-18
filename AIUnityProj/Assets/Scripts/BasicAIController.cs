@@ -144,7 +144,7 @@ public class BasicAIController : MonoBehaviour
             }
         }
         //  otherwise, is there a target but it isn't a valid target?
-        else if (target != null && !hasValidTarget)
+        else if (target != null && target.GetComponent<HumanoidMotor>().isScary)
         {
             if (!isEvading)
             {
