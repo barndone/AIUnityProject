@@ -761,6 +761,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2694034207096577738, guid: f6c8dc1c99247314e9f117ab6cccccd2, type: 3}
+      propertyPath: threshold
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2694034207096577738, guid: f6c8dc1c99247314e9f117ab6cccccd2, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
       objectReference: {fileID: 1870691280}
@@ -789,6 +793,18 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4273494414031210489, guid: c77830ca1ea66f740a3df6a4cb5c7860, type: 3}
+      propertyPath: materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273494414031210489, guid: c77830ca1ea66f740a3df6a4cb5c7860, type: 3}
+      propertyPath: materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ed6c1629af4f456409d80452b28fd80d, type: 2}
+    - target: {fileID: 4273494414031210489, guid: c77830ca1ea66f740a3df6a4cb5c7860, type: 3}
+      propertyPath: materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1d97a602eca24d84098e6c66306ab51c, type: 2}
     - target: {fileID: 4273494414291628032, guid: c77830ca1ea66f740a3df6a4cb5c7860, type: 3}
       propertyPath: m_RootOrder
       value: 3

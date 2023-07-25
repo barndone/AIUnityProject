@@ -122,7 +122,7 @@ public class BasicAIController : MonoBehaviour
         }
         
         //  if there is a target and it is valid
-        if (target != null && hasValidTarget)
+        if (target != null && hasValidTarget && !target.GetComponent<HumanoidMotor>().isScary)
         {
             //  pursue the target (if not already pursuing)
             if (!isPursuing)
